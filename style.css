@@ -1,15 +1,20 @@
 /* ---------- INDEX ---------- */ 
 /* Negrito e Marcado */
 
-.negrito-azul {
+.negritoAzul {
     font-weight: bold;
-    color: #2E2EFF;
+    color: #1818bb;
 }
 
-.marcado-azul {
-    background-color: #6363fa6c;
-    padding: 2px 4px;
-    border-radius: 4px;
+.marcadoAzul {
+  background: linear-gradient(to right, #6363fa6c 0%, #6363fa6c 100%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 1.5s ease;
+}
+
+.marcadoAzul.active {
+  background-size: 100% 100%;
 }
 
 /* ESTILIZAÇÃO GERAL  */
@@ -21,13 +26,13 @@ body {
 }
 
 header {
-    background: linear-gradient(90deg, #1313d2, #0000D1);
+    background: linear-gradient(90deg, #3d3dff, #0000bb);
     height:5.625rem;
     display:flex;
     align-items:center;
     justify-content:space-between;
     padding:0 4rem;
-    box-shadow:0 4px 20px rwgba(0,0,0,0.15);
+    box-shadow:0 4px 20px rgba(0,0,0,0.15);
 }
 
 header img{
@@ -59,6 +64,12 @@ main h2 {
     font-style:normal;
     font-size:3rem;
 }
+
+.backgroundAparte {
+    background-color: #eaeaea;
+    background-size: auto;
+    border-radius: 12px;
+} 
 
 /* FONTE DO H2 */
 
@@ -206,7 +217,7 @@ footer{
 }
 
 .card-info{
-    background: wcoite;
+    background: white;
     padding: 10px;
     width: 260px;
     border-radius: 12px;
@@ -224,7 +235,7 @@ footer{
     text-align: center;
     background: linear-gradient(120deg,#003366,#0055aa);
     color: white;
-        border-radius: 14px;
+    border-radius: 14px;
 }
 
 .botao{
@@ -243,3 +254,43 @@ footer{
     background: #eaeaea;
 }
 
+.carousel-container { 
+    position: relative; 
+    overflow: hidden; 
+    max-width: 600px; 
+}
+
+.carousel-track { 
+    display: flex; 
+    transition: transform .4s ease; 
+}
+
+.carousel-slide { 
+    min-width: 100%; 
+}
+
+.carousel-slide img { 
+    width: 100%; 
+    display: block; 
+}
+
+.carousel-btn { 
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+
+.prev { left: 10px; }
+
+.next { right: 10px; }
+
+.centralizador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}       
+
+.finale{
+    color: #0000D1;
+}
