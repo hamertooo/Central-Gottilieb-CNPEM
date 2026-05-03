@@ -147,37 +147,36 @@ body {
 }
 
 header {
-    background: linear-gradient(90deg, #1313d2, #0000D1);
-    height: 5.625rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 4rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    
-    
+    background: linear-gradient(90deg, #1313d2, #00008d);
+    height:5.625rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 4rem;
+    box-shadow:0 4px 20px rgba(0,0,0,0.15);
 }
 
-.header img {
-    max-width: 100px;
-    height: auto;
+header img {
+  max-width:6.25rem;
+  height:auto;
+  display:block;
 }
 
 /* Estilo base da logo */
-.header a img {
+header a img {
     transition: transform 0.3s ease; /* Define o tempo e a suavidade da animação */
     cursor: pointer;
     display: block; /* Remove espaços indesejados abaixo da imagem */
 }
 
 /* Efeito ao passar o mouse  */
-.header a img:hover {
+header a img:hover {
     transform: scale(1.1); /* Aumenta o tamanho em 10% */
     filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2)); /* Opcional: adiciona uma sombra suave para dar profundidade */
 }
 
 /* Efeito ao clicar */
-.header a img:active {
+header a img:active {
     transform: scale(0.95);
 }
 
