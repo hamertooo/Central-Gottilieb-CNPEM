@@ -1,112 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+
+/* ---------- BASE GERAL ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    color: #2f3640;
+}
+
+
+/* ---------- HEADER ---------- */
+
+header {
+    background: linear-gradient(90deg, #1313d2, #00008d);
+    height: 5.625rem;
+    min-height: 5.625rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 4rem;
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+header img {
+    max-width: 6.25rem;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+header a img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+header a img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+}
+
+header a img:active {
+    transform: scale(0.95);
+}
+
+
+/* ---------- MENU ---------- */
+
+.menu {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.2rem;
+  position: relative;
+  transition: 0.3s;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0%;
+    height: 2px;
+
+    background: white;
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+
+/* ---------- MAIN ---------- */
+
+main {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 50px 20px;
+}
 
 
 /* ---------- CONTATO ---------- */
 
 .pagina-contato {
+    width: 100%;
     max-width: 1000px;
-    margin: 50px auto;
+
     padding: 40px;
 
-    background: linear-gradient(120deg,#f7f9ff,#ffffff);
-    border-radius: 20px;
+    background: white;
+    border-radius: 16px;
 
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 
     text-align: center;
-
-    animation: fadeUp 0.8s ease;
 }
 
 .pagina-contato h1 {
     font-family: "Abril Fatface", serif;
     font-size: 2.8rem;
+    font-weight: 400;
+
     color: #0000D1;
-    margin-bottom: 20px;
+
+    margin: 0 0 20px 0;
 }
 
 .descricao {
+    max-width: 700px;
+
+    margin: 0 auto 40px auto;
+
     font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 40px;
+    color: #2f3640;
     line-height: 1.6;
 }
 
-/* GRID DE CONTATO */
+
+/* ---------- GRID DE CONTATO ---------- */
 
 .contato-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
 
-/* CARDS */
+
+/* ---------- CARDS ---------- */
 
 .card-contato {
     background: white;
+
     padding: 25px;
-    border-radius: 16px;
 
-    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-    transition: 0.3s;
+    border-radius: 12px;
+    border-top: 4px solid #0000D1;
 
-    border-top: 4px solid #2E2EFF;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-contato:hover {
-    transform: translateY(-8px) scale(1.03);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 .card-contato h3 {
-    color: #2E2EFF;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
+
+    color: #0000D1;
     font-size: 1.4rem;
 }
 
 .texto-contato {
+    margin: 0;
+
     font-size: 1.1rem;
-    color: #444;
+    color: #2f3640;
+    line-height: 1.5;
 }
 
-/* BOTÃO (reaproveitando estilo do index) */
+
+/* ---------- BOTÃO ---------- */
 
 .button {
     display: inline-block;
+
     margin-top: 15px;
     padding: 10px 20px;
 
-    background: linear-gradient(120deg,#000085,#0000D1);
+    background: #5C5CFF;
     color: white;
 
     text-decoration: none;
     border-radius: 8px;
 
     font-weight: bold;
-    transition: 0.3s;
+
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .button:hover {
+    background: #0000D1;
     transform: translateY(-3px);
-    background: linear-gradient(120deg,#0000D1,#2E2EFF);
 }
 
-/* ANIMAÇÃO */
 
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* ---------- FOOTER ---------- */
+
+footer {
+    background: #222;
+    color: white;
+
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
 }
 
-/* RESPONSIVO */
+footer p {
+    margin: 0;
+}
+
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 900px) {
+    .contato-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 @media (max-width: 768px) {
+    header {
+        padding: 0 1.5rem;
+    }
+
+    .menu {
+        gap: 1.2rem;
+    }
+
+    .menu a {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 25px 20px;
+    }
+
     .pagina-contato {
-        margin: 20px;
         padding: 25px;
     }
 
@@ -119,146 +272,18 @@
     }
 }
 
-/* ---------- INDEX ---------- */ 
-/* Negrito e Marcado */
+@media (max-width: 520px) {
+    header {
+        height: 5.625rem;
+        min-height: 5.625rem;
+        padding: 0 1rem;
+    }
 
-.negrito-azul {
-    font-weight: bold;
-    color: #2E2EFF;
-}
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
 
-.marcado-azul {
-    background-color: #6363fa6c;
-    padding: 2px 4px;
-    border-radius: 4px;
-   
-}
-
-/* ESTILIZAÇÃO GERAL  */
-
-body {
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-header {
-    background: linear-gradient(90deg, #1313d2, #00008d);
-    height:5.625rem;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 4rem;
-    box-shadow:0 4px 20px rgba(0,0,0,0.15);
-}
-
-header img {
-  max-width:6.25rem;
-  height:auto;
-  display:block;
-}
-
-/* Estilo base da logo */
-header a img {
-    transition: transform 0.3s ease; /* Define o tempo e a suavidade da animação */
-    cursor: pointer;
-    display: block; /* Remove espaços indesejados abaixo da imagem */
-}
-
-/* Efeito ao passar o mouse  */
-header a img:hover {
-    transform: scale(1.1); /* Aumenta o tamanho em 10% */
-    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2)); /* Opcional: adiciona uma sombra suave para dar profundidade */
-}
-
-/* Efeito ao clicar */
-header a img:active {
-    transform: scale(0.95);
-}
-
-main {
-    flex: 1;
-}
-
-/* FONTE DO H2 */
-
-.abril-fatface-regular {
-  font-family: "Abril Fatface", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-
-/* ---------- FOOTER PADRÃO ---------- */
-
-footer{
-  grid-row: footer-start / footer-end;
-  background:#222;
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-
-/* MENU */
-
-/* ---------- MENU ---------- */
-.menu {
-    display: flex;
-    gap: 2.5rem;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    position: relative;
-     
-}
-
-.menu a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0%;
-    height: 2px;
-    background: white;
-    transition: 0.3s;
-}
-
-.menu a:hover::after {
-    width: 100%;
-}
-
-
-.header nav ul{
-  display:flex;
-  gap:2rem;
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-
-.header nav a{
-  color:white;
-  text-decoration:none;
-
-  
-}
-
-.button{
-    display:inline-block;
-    background:#5C5CFF;
-    color:white;
-    padding:10px;
-    border-radius:8px;
-    text-decoration:none;
-    margin-top:10px;
+    .pagina-contato {
+        padding: 22px;
+    }
 }
