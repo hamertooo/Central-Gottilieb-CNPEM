@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Central Gottilieb</title>
+    <!-- Os meta ajudam a otimizar o desempenho e a indexação do site -->
 
     <link rel="stylesheet" href="style.css">
+    <!-- Liga o nosso CSS Externo -->
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <!-- Esses quatro links trazem o favicon/icon para o site, são ícones 32x32, bem pequenos mesmo -->
 </head>
 
 <body>
@@ -27,6 +30,7 @@
             <a href="https://cnpem.br">Pesquisas relacionadas</a>
         </nav>
     </header>
+    <!-- Esse header está montado puxando outros arquivos html e o próprio site do CNPEM, em forma de hyperlink -->
 
     <section class="bobao">
         <h2>
@@ -40,9 +44,11 @@
             <strong class="negritoAzul">visitação gratuita.</strong>
         </p>
     </section>
+    <!-- O section está separado do main para não dar problema com o CSS, assim temos total controle de como ele aparece -->
 
     <main>
-
+        <!-- Começando, deixamos tudo dentro de um único section, para nenhum texto se separar da linha que queremos
+         assim evitando de criar mais css para manutenção da matéria principal -->
         <section id="materia_artigo">
 
             <p>
@@ -189,6 +195,7 @@
                 </button>
             </div>
 
+            <!-- Cards laterais flutuantes, escondidos com um script JS -->
             <div class="cards-laterais fechado">
                 <div class="card-info">
                     <h3>🔬 Estrutura única</h3>

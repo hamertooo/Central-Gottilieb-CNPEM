@@ -21,7 +21,7 @@ body {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(100px);
   }
 
   to {
@@ -58,6 +58,8 @@ body {
   color: #0000D1;
 }
 
+/* Classe para defenir certa parte da Animação do fadein em textos com o (MarcadoAzul) */
+
 .Joabi {
   animation: fadeIn 0.8s ease both;
   animation-timeline: view();
@@ -91,6 +93,8 @@ header a img {
   cursor: pointer;
   display: block;
 }
+
+/* Animação ao passar o mouse sobre a imagem do header, dando um leve zoom e sombra */
 
 header a img:hover {
   transform: scale(1.1);
