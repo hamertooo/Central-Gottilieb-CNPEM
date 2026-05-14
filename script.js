@@ -1,4 +1,4 @@
-// O JS foi feito com ChatGPT e outras IAs, exceto o "Hamburguer", que foi feito pelo Samuel
+  // O JS foi feito com ChatGPT e outras IAs, exceto o "Hamburguer", que foi feito pelo Samuel
 
 
 // CARROSSEL
