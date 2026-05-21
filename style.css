@@ -162,7 +162,7 @@ header a img:active {
   color: white;
 }
 
-.bobao h2 {
+.banner h2 {
   max-width: 900px;
 
   font-family: "Abril Fatface", serif;
@@ -172,7 +172,7 @@ header a img:active {
   margin-bottom: 15px;
 }
 
-.bobao p {
+.banner p {
   max-width: 800px;
 
   font-family: Arial, Helvetica, sans-serif;
@@ -637,7 +637,7 @@ footer {
     font-size: 1rem;
   }
 
-  .bobao {
+  .banner {
     min-height: 420px;
     padding: 2rem 1rem;
 
@@ -645,7 +645,7 @@ footer {
     text-align: center;
   }
 
-  .bobao h2 {
+  .banner h2 {
     margin-bottom: 1rem;
   }
 
